@@ -54,7 +54,7 @@ export class CookieConsent {
 
   // PUBLIC METHODS
   dismiss() {
-    Cookies.put('aurelia-cookie-consent', true, this._config.cookie);
+    Cookies.put('aurelia-cookie-consent', true, this._config.get('cookie'));
     this.show = false;
   }
 }

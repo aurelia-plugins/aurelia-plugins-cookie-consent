@@ -70,7 +70,7 @@ define(['exports', 'aurelia-cookies', 'aurelia-dependency-injection', 'aurelia-t
     }
 
     CookieConsent.prototype.dismiss = function dismiss() {
-      _aureliaCookies.Cookies.put('aurelia-cookie-consent', true, this._config.cookie);
+      _aureliaCookies.Cookies.put('aurelia-cookie-consent', true, this._config.get('cookie'));
       this.show = false;
     };
 

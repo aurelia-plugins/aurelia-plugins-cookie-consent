@@ -68,7 +68,7 @@ export var CookieConsent = (_dec = customElement('cookie-consent'), _dec2 = inje
   }
 
   CookieConsent.prototype.dismiss = function dismiss() {
-    Cookies.put('aurelia-cookie-consent', true, this._config.cookie);
+    Cookies.put('aurelia-cookie-consent', true, this._config.get('cookie'));
     this.show = false;
   };
 

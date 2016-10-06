@@ -77,7 +77,7 @@ var CookieConsent = exports.CookieConsent = (_dec = (0, _aureliaTemplating.custo
   }
 
   CookieConsent.prototype.dismiss = function dismiss() {
-    _aureliaCookies.Cookies.put('aurelia-cookie-consent', true, this._config.cookie);
+    _aureliaCookies.Cookies.put('aurelia-cookie-consent', true, this._config.get('cookie'));
     this.show = false;
   };
 

@@ -79,7 +79,7 @@ System.register(['aurelia-cookies', 'aurelia-dependency-injection', 'aurelia-tem
         }
 
         CookieConsent.prototype.dismiss = function dismiss() {
-          Cookies.put('aurelia-cookie-consent', true, this._config.cookie);
+          Cookies.put('aurelia-cookie-consent', true, this._config.get('cookie'));
           this.show = false;
         };
 
