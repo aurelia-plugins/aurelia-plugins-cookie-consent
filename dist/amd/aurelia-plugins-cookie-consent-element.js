@@ -1,4 +1,4 @@
-define(['exports', 'aurelia-cookies', 'aurelia-dependency-injection', 'aurelia-templating', './aurelia-cookie-consent-config'], function (exports, _aureliaCookies, _aureliaDependencyInjection, _aureliaTemplating, _aureliaCookieConsentConfig) {
+define(['exports', 'aurelia-plugins-cookies', 'aurelia-dependency-injection', 'aurelia-templating', './aurelia-plugins-cookie-consent-config'], function (exports, _aureliaPluginsCookies, _aureliaDependencyInjection, _aureliaTemplating, _aureliaPluginsCookieConsentConfig) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -53,7 +53,7 @@ define(['exports', 'aurelia-cookies', 'aurelia-dependency-injection', 'aurelia-t
 
   var _dec, _dec2, _class, _desc, _value, _class2, _descriptor, _descriptor2;
 
-  var CookieConsent = exports.CookieConsent = (_dec = (0, _aureliaTemplating.customElement)('cookie-consent'), _dec2 = (0, _aureliaDependencyInjection.inject)(Element, _aureliaCookieConsentConfig.Config), _dec(_class = _dec2(_class = (_class2 = function () {
+  var CookieConsent = exports.CookieConsent = (_dec = (0, _aureliaTemplating.customElement)('aup-cookie-consent'), _dec2 = (0, _aureliaDependencyInjection.inject)(Element, _aureliaPluginsCookieConsentConfig.Config), _dec(_class = _dec2(_class = (_class2 = function () {
     function CookieConsent(element, config) {
       
 
@@ -63,14 +63,14 @@ define(['exports', 'aurelia-cookies', 'aurelia-dependency-injection', 'aurelia-t
 
       this.show = false;
 
-      this._element = element;
       this._config = config;
+      this._element = element;
 
-      this.show = !_aureliaCookies.Cookies.get('aurelia-cookie-consent');
+      this.show = !_aureliaPluginsCookies.Cookies.get('aurelia-plugins-cookie-consent');
     }
 
     CookieConsent.prototype.dismiss = function dismiss() {
-      _aureliaCookies.Cookies.put('aurelia-cookie-consent', true, this._config.get('cookie'));
+      _aureliaPluginsCookies.Cookies.put('aurelia-plugins-cookie-consent', true, this._config.get('cookie'));
       this.show = false;
     };
 

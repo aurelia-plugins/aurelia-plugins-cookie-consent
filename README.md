@@ -1,4 +1,4 @@
-# aurelia-cookie-consent
+# aurelia-plugins-cookie-consent
 
 A Cookie Consent plugin for Aurelia.
 
@@ -7,19 +7,19 @@ A Cookie Consent plugin for Aurelia.
 **Webpack/Aurelia CLI**
 
 ```shell
-npm install aurelia-cookie-consent --save
+npm install aurelia-plugins-cookie-consent --save
 ```
 
 **JSPM**
 
 ```shell
-jspm install aurelia-cookie-consent
+jspm install aurelia-plugins-cookie-consent
 ```
 
 **Bower**
 
 ```shell
-bower install aurelia-cookie-consent
+bower install aurelia-plugins-cookie-consent
 ```
 
 ## Configuration
@@ -30,7 +30,7 @@ Add to `package.json`
   "aurelia": {
     "build": {
       "resources": [
-        "aurelia-cookie-consent"
+        "aurelia-plugins-cookie-consent"
       ]
     }
   }
@@ -45,7 +45,7 @@ export async function configure(aurelia) {
     .developmentLogging();
 
   aurelia.use
-    .plugin('aurelia-cookie-consent', config => {
+    .plugin('aurelia-plugins-cookie-consent', config => {
       config.options({
         cookie: { domain: 'mydomain', path: '/' }, // your typical cookie settings like domain, path, expires
       });
@@ -58,18 +58,18 @@ export async function configure(aurelia) {
 
 ## Usage
 
-Once Cookie Consent is configured, to use it simply add the custom element `<cookie-consent></cookie-consent>` in your view.
+Once Cookie Consent is configured, to use it simply add the custom element `<aup-cookie-consent></aup-cookie-consent>` in your view.
 
 ### Change the text
 
 To change the text, simply add the attributes `button` and `message`.
 
 ```html
-<cookie-consent button="button-text" message="message-text"></cookie-consent>
+<aup-cookie-consent button="button-text" message="message-text"></aup-cookie-consent>
 ```
 
-If you're using `aurelia-i18n`, you can use the tValueConverter to fill in the different texts.
+If you're using `aurelia-i18n`, you can use the tValueConverter to translate the different texts.
 
 ```html
-<cookie-consent button="${ 'button-text' & t }" message="${ 'message-text' & t }"></cookie-consent>
+<aup-cookie-consent button="${ 'button-text' & t }" message="${ 'message-text' & t }"></aup-cookie-consent>
 ```

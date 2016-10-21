@@ -1,4 +1,4 @@
-define(['exports', './aurelia-cookie-consent-config'], function (exports, _aureliaCookieConsentConfig) {
+define(['exports', './aurelia-plugins-cookie-consent-config'], function (exports, _aureliaPluginsCookieConsentConfig) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -6,8 +6,8 @@ define(['exports', './aurelia-cookie-consent-config'], function (exports, _aurel
   });
   exports.configure = configure;
   function configure(aurelia, configCallback) {
-    var instance = aurelia.container.get(_aureliaCookieConsentConfig.Config);
+    var instance = aurelia.container.get(_aureliaPluginsCookieConsentConfig.Config);
     if (configCallback !== undefined && typeof configCallback === 'function') configCallback(instance);
-    aurelia.globalResources('./aurelia-cookie-consent-element');
+    aurelia.globalResources('./aurelia-plugins-cookie-consent-element');
   }
 });

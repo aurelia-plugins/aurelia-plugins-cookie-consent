@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['aurelia-cookies', 'aurelia-dependency-injection', 'aurelia-templating', './aurelia-cookie-consent-config'], function (_export, _context) {
+System.register(['aurelia-plugins-cookies', 'aurelia-dependency-injection', 'aurelia-templating', './aurelia-plugins-cookie-consent-config'], function (_export, _context) {
   "use strict";
 
   var Cookies, inject, bindable, customElement, Config, _dec, _dec2, _class, _desc, _value, _class2, _descriptor, _descriptor2, CookieConsent;
@@ -51,18 +51,18 @@ System.register(['aurelia-cookies', 'aurelia-dependency-injection', 'aurelia-tem
   }
 
   return {
-    setters: [function (_aureliaCookies) {
-      Cookies = _aureliaCookies.Cookies;
+    setters: [function (_aureliaPluginsCookies) {
+      Cookies = _aureliaPluginsCookies.Cookies;
     }, function (_aureliaDependencyInjection) {
       inject = _aureliaDependencyInjection.inject;
     }, function (_aureliaTemplating) {
       bindable = _aureliaTemplating.bindable;
       customElement = _aureliaTemplating.customElement;
-    }, function (_aureliaCookieConsentConfig) {
-      Config = _aureliaCookieConsentConfig.Config;
+    }, function (_aureliaPluginsCookieConsentConfig) {
+      Config = _aureliaPluginsCookieConsentConfig.Config;
     }],
     execute: function () {
-      _export('CookieConsent', CookieConsent = (_dec = customElement('cookie-consent'), _dec2 = inject(Element, Config), _dec(_class = _dec2(_class = (_class2 = function () {
+      _export('CookieConsent', CookieConsent = (_dec = customElement('aup-cookie-consent'), _dec2 = inject(Element, Config), _dec(_class = _dec2(_class = (_class2 = function () {
         function CookieConsent(element, config) {
           
 
@@ -72,14 +72,14 @@ System.register(['aurelia-cookies', 'aurelia-dependency-injection', 'aurelia-tem
 
           this.show = false;
 
-          this._element = element;
           this._config = config;
+          this._element = element;
 
-          this.show = !Cookies.get('aurelia-cookie-consent');
+          this.show = !Cookies.get('aurelia-plugins-cookie-consent');
         }
 
         CookieConsent.prototype.dismiss = function dismiss() {
-          Cookies.put('aurelia-cookie-consent', true, this._config.get('cookie'));
+          Cookies.put('aurelia-plugins-cookie-consent', true, this._config.get('cookie'));
           this.show = false;
         };
 

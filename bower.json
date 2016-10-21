@@ -1,15 +1,16 @@
 {
-  "name": "aurelia-cookie-consent",
-  "version": "1.0.1",
+  "name": "aurelia-plugins-cookie-consent",
+  "version": "1.1.0",
   "description": "A Cookie Consent plugin for Aurelia.",
   "keywords": [
     "aurelia",
+    "plugins",
     "plugin",
     "cookie",
     "consent"
   ],
-  "homepage": "https://github.com/aurelia-plugins/aurelia-cookie-consent",
-  "main": "dist/commonjs/aurelia-cookie-consent.js",
+  "homepage": "https://github.com/aurelia-plugins/aurelia-plugins-cookie-consent",
+  "main": "dist/commonjs/aurelia-plugins-cookie-consent.js",
   "moduleType": "node",
   "license": "MIT",
   "authors": [
@@ -17,11 +18,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/aurelia-plugins/aurelia-cookie-consent"
+    "url": "http://github.com/aurelia-plugins/aurelia-plugins-cookie-consent"
   },
   "dependencies": {
-    "aurelia-cookies": "^1.1.1",
-    "aurelia-dependency-injection": "^1.0.0",
-    "aurelia-templating": "^1.1.0"
+    "aurelia-cookies": "^1.2.0",
+    "aurelia-dependency-injection": "^1.2.0",
+    "aurelia-templating": "^1.1.2"
   }
 }

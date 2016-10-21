@@ -1,6 +1,6 @@
 import {
   Cookies
-} from 'aurelia-cookies';
+} from 'aurelia-plugins-cookies';
 import {
   inject
 } from 'aurelia-dependency-injection';
@@ -28,6 +28,8 @@ export declare class Config {
 export declare class CookieConsent {
   button: any;
   message: any;
+  
+  // PUBLIC PROPERTIES
   show: any;
   
   // CONSTRUCTOR

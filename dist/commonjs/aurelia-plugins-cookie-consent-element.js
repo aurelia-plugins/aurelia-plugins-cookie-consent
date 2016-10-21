@@ -1,4 +1,19 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.CookieConsent = undefined;
+
 var _dec, _dec2, _class, _desc, _value, _class2, _descriptor, _descriptor2;
+
+var _aureliaPluginsCookies = require('aurelia-plugins-cookies');
+
+var _aureliaDependencyInjection = require('aurelia-dependency-injection');
+
+var _aureliaTemplating = require('aurelia-templating');
+
+var _aureliaPluginsCookieConsentConfig = require('./aurelia-plugins-cookie-consent-config');
 
 function _initDefineProp(target, property, descriptor, context) {
   if (!descriptor) return;
@@ -45,13 +60,7 @@ function _initializerWarningHelper(descriptor, context) {
   throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
 }
 
-import { Cookies } from 'aurelia-cookies';
-import { inject } from 'aurelia-dependency-injection';
-import { bindable, customElement } from 'aurelia-templating';
-
-import { Config } from './aurelia-cookie-consent-config';
-
-export var CookieConsent = (_dec = customElement('cookie-consent'), _dec2 = inject(Element, Config), _dec(_class = _dec2(_class = (_class2 = function () {
+var CookieConsent = exports.CookieConsent = (_dec = (0, _aureliaTemplating.customElement)('aup-cookie-consent'), _dec2 = (0, _aureliaDependencyInjection.inject)(Element, _aureliaPluginsCookieConsentConfig.Config), _dec(_class = _dec2(_class = (_class2 = function () {
   function CookieConsent(element, config) {
     
 
@@ -61,24 +70,24 @@ export var CookieConsent = (_dec = customElement('cookie-consent'), _dec2 = inje
 
     this.show = false;
 
-    this._element = element;
     this._config = config;
+    this._element = element;
 
-    this.show = !Cookies.get('aurelia-cookie-consent');
+    this.show = !_aureliaPluginsCookies.Cookies.get('aurelia-plugins-cookie-consent');
   }
 
   CookieConsent.prototype.dismiss = function dismiss() {
-    Cookies.put('aurelia-cookie-consent', true, this._config.get('cookie'));
+    _aureliaPluginsCookies.Cookies.put('aurelia-plugins-cookie-consent', true, this._config.get('cookie'));
     this.show = false;
   };
 
   return CookieConsent;
-}(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'button', [bindable], {
+}(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'button', [_aureliaTemplating.bindable], {
   enumerable: true,
   initializer: function initializer() {
     return 'Got it!';
   }
-}), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'message', [bindable], {
+}), _descriptor2 = _applyDecoratedDescriptor(_class2.prototype, 'message', [_aureliaTemplating.bindable], {
   enumerable: true,
   initializer: function initializer() {
     return 'This website uses cookies to ensure you get the best experience on our website.';

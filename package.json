@@ -1,24 +1,25 @@
 {
-  "name": "aurelia-cookie-consent",
-  "version": "1.0.1",
+  "name": "aurelia-plugins-cookie-consent",
+  "version": "1.1.0",
   "description": "A Cookie Consent plugin for Aurelia.",
   "keywords": [
     "aurelia",
+    "plugins",
     "plugin",
     "cookie",
     "consent"
   ],
-  "homepage": "https://github.com/aurelia-plugins/aurelia-cookie-consent",
+  "homepage": "https://github.com/aurelia-plugins/aurelia-plugins-cookie-consent",
   "bugs": {
-    "url": "https://github.com/aurelia-plugins/aurelia-cookie-consent/issues"
+    "url": "https://github.com/aurelia-plugins/aurelia-plugins-cookie-consent/issues"
   },
   "license": "MIT",
   "author": "Bart Lenaerts <bart@itprosolutions.be> (http://itprosolutions.be/)",
-  "main": "dist/commonjs/aurelia-cookie-consent.js",
-  "typings": "dist/aurelia-cookie-consent.d.ts",
+  "main": "dist/commonjs/aurelia-plugins-cookie-consent.js",
+  "typings": "dist/aurelia-plugins-cookie-consent.d.ts",
   "repository": {
     "type": "git",
-    "url": "http://github.com/aurelia-plugins/aurelia-cookie-consent"
+    "url": "http://github.com/aurelia-plugins/aurelia-plugins-cookie-consent"
   },
   "jspm": {
     "registry": "npm",
@@ -29,21 +30,21 @@
       "dist": "dist/amd"
     },
     "peerDependencies": {
-      "aurelia-cookies": "^1.1.1",
-      "aurelia-dependency-injection": "^1.0.0",
-      "aurelia-templating": "^1.1.0"
+      "aurelia-cookies": "^1.2.0",
+      "aurelia-dependency-injection": "^1.2.0",
+      "aurelia-templating": "^1.1.2"
     },
     "dependencies": {
-      "aurelia-cookies": "^1.1.1",
-      "aurelia-dependency-injection": "^1.0.0",
-      "aurelia-templating": "^1.1.0"
+      "aurelia-cookies": "^1.2.0",
+      "aurelia-dependency-injection": "^1.2.0",
+      "aurelia-templating": "^1.1.2"
     },
     "devDependencies": {}
   },
   "dependencies": {
-    "aurelia-cookies": "^1.1.1",
-    "aurelia-dependency-injection": "^1.0.0",
-    "aurelia-templating": "^1.1.0"
+    "aurelia-cookies": "^1.2.0",
+    "aurelia-dependency-injection": "^1.2.0",
+    "aurelia-templating": "^1.1.2"
   },
   "devDependencies": {
     "aurelia-tools": "^0.2.4",
@@ -96,7 +97,7 @@
   "aurelia": {
     "build": {
       "resources": [
-        "aurelia-cookie-consent/aurelia-cookie-consent-element"
+        "aurelia-plugins-cookie-consent/aurelia-plugins-cookie-consent-element"
       ]
     },
     "documentation": {

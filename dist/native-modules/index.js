@@ -1,1 +1,1 @@
-export * from './aurelia-cookie-consent';
+export * from './aurelia-plugins-cookie-consent';
