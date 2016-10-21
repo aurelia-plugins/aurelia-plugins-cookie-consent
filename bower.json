@@ -1,6 +1,6 @@
 {
   "name": "aurelia-plugins-cookie-consent",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A Cookie Consent plugin for Aurelia.",
   "keywords": [
     "aurelia",
@@ -21,7 +21,7 @@
     "url": "http://github.com/aurelia-plugins/aurelia-plugins-cookie-consent"
   },
   "dependencies": {
-    "aurelia-cookies": "^1.2.0",
+    "aurelia-plugins-cookies": "^1.2.1",
     "aurelia-dependency-injection": "^1.2.0",
     "aurelia-templating": "^1.1.2"
   }

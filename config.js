@@ -6,10 +6,10 @@ System.config({
     "npm:*": "jspm_packages/npm/*"
   },
   map: {
-    "aurelia-cookies": "npm:aurelia-cookies@1.2.0",
+    "aurelia-plugins-cookies": "npm:aurelia-plugins-cookies@1.2.1",
     "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.2.0",
     "aurelia-templating": "npm:aurelia-templating@1.1.2",
-    "npm:aurelia-cookies@1.2.0": {},
+    "npm:aurelia-plugins-cookies@1.2.1": {},
     "npm:aurelia-dependency-injection@1.2.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.2",
       "aurelia-pal": "npm:aurelia-pal@1.0.0"
