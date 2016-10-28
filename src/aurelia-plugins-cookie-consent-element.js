@@ -28,7 +28,6 @@ export class CookieConsent {
   constructor(element, config) {
     this._config = config;
     this._element = element;
-
     this.show = !Cookies.get('aurelia-plugins-cookie-consent');
   }
 
