@@ -47,7 +47,7 @@ export async function configure(aurelia) {
   aurelia.use
     .plugin('aurelia-plugins-cookie-consent', config => {
       config.options({
-        cookie: { domain: 'mydomain', path: '/' }, // your typical cookie settings like domain, path, expires
+        cookie: { domain: 'mydomain', path: '/' }, // your typical cookie settings like domain, expires, path and secure
       });
     });
 
