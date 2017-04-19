@@ -47,12 +47,5 @@
       "aurelia-plugins-cookies": "^2.0.2",
       "aurelia-templating": "^1.4.2"
     }
-  },
-  "aurelia": {
-    "build": {
-      "resources": [
-        "aurelia-plugins-cookie-consent/aurelia-plugins-cookie-consent-element"
-      ]
-    }
   }
 }
