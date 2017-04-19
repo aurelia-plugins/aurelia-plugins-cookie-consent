@@ -14,8 +14,8 @@ import {Config} from './aurelia-plugins-cookie-consent-config';
 // PUBLIC CLASS
 export class CookieConsent {
   // PRIVATE PROPERTIES (DI)
-  config;
-  element;
+  _config;
+  _element;
 
   // BINDABLE PROPERTIES
   @bindable button = 'Got it!';
@@ -26,14 +26,14 @@ export class CookieConsent {
 
   // CONSTRUCTOR
   constructor(element, config) {
-    this.config = config;
-    this.element = element;
+    this._config = config;
+    this._element = element;
     this.show = !Cookies.get('aurelia-plugins-cookie-consent');
   }
 
   // PUBLIC METHODS
   dismiss() {
-    Cookies.put('aurelia-plugins-cookie-consent', true, this.config.get('cookie'));
+    Cookies.put('aurelia-plugins-cookie-consent', true, this._config.get('cookie'));
     this.show = false;
   }
 }
