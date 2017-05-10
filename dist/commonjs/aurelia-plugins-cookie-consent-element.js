@@ -23,6 +23,8 @@ function _initDefineProp(target, property, descriptor, context) {
   });
 }
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 function _applyDecoratedDescriptor(target, property, decorators, descriptor, context) {
   var desc = {};
   Object['ke' + 'ys'](descriptor).forEach(function (key) {
@@ -56,8 +58,10 @@ function _initializerWarningHelper(descriptor, context) {
   throw new Error('Decorating class property failed. Please ensure that transform-class-properties is enabled.');
 }
 
-let CookieConsent = exports.CookieConsent = (_dec = (0, _aureliaTemplating.customElement)('aup-cookie-consent'), _dec2 = (0, _aureliaDependencyInjection.inject)(Element, _aureliaPluginsCookieConsentConfig.Config), _dec(_class = _dec2(_class = (_class2 = class CookieConsent {
-  constructor(element, config) {
+var CookieConsent = exports.CookieConsent = (_dec = (0, _aureliaTemplating.customElement)('aup-cookie-consent'), _dec2 = (0, _aureliaDependencyInjection.inject)(Element, _aureliaPluginsCookieConsentConfig.Config), _dec(_class = _dec2(_class = (_class2 = function () {
+  function CookieConsent(element, config) {
+    _classCallCheck(this, CookieConsent);
+
     _initDefineProp(this, 'button', _descriptor, this);
 
     _initDefineProp(this, 'message', _descriptor2, this);
@@ -69,11 +73,13 @@ let CookieConsent = exports.CookieConsent = (_dec = (0, _aureliaTemplating.custo
     this.show = !_aureliaPluginsCookies.Cookies.get('aurelia-plugins-cookie-consent');
   }
 
-  dismiss() {
+  CookieConsent.prototype.dismiss = function dismiss() {
     _aureliaPluginsCookies.Cookies.put('aurelia-plugins-cookie-consent', true, this._config.get('cookie'));
     this.show = false;
-  }
-}, (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'button', [_aureliaTemplating.bindable], {
+  };
+
+  return CookieConsent;
+}(), (_descriptor = _applyDecoratedDescriptor(_class2.prototype, 'button', [_aureliaTemplating.bindable], {
   enumerable: true,
   initializer: function initializer() {
     return 'Got it!';

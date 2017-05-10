@@ -1,19 +1,12 @@
-System.register(['./aurelia-plugins-cookie-consent-config'], function (_export, _context) {
-  "use strict";
+'use strict';
 
-  var Config;
-  function configure(aurelia, configCallback) {
-    const instance = aurelia.container.get(Config);
-    if (configCallback !== undefined && typeof configCallback === 'function') configCallback(instance);
-    aurelia.globalResources('./aurelia-plugins-cookie-consent-element');
-  }
+exports.__esModule = true;
+exports.configure = configure;
 
-  _export('configure', configure);
+var _aureliaPluginsCookieConsentConfig = require('./aurelia-plugins-cookie-consent-config');
 
-  return {
-    setters: [function (_aureliaPluginsCookieConsentConfig) {
-      Config = _aureliaPluginsCookieConsentConfig.Config;
-    }],
-    execute: function () {}
-  };
-});
+function configure(aurelia, configCallback) {
+  var instance = aurelia.container.get(_aureliaPluginsCookieConsentConfig.Config);
+  if (configCallback !== undefined && typeof configCallback === 'function') configCallback(instance);
+  aurelia.globalResources('./aurelia-plugins-cookie-consent-element');
+}
