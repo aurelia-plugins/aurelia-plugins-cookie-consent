@@ -87,9 +87,9 @@ aurelia-path@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/aurelia-path/-/aurelia-path-1.1.1.tgz#caa9d20bc8515a5f9f286d9a3b18d81b2c85b0dd"
 
-aurelia-plugins-cookies@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/aurelia-plugins-cookies/-/aurelia-plugins-cookies-2.0.2.tgz#9213b9104ec6f976b7fe0c543d4e3124d4cc4935"
+aurelia-plugins-cookies@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/aurelia-plugins-cookies/-/aurelia-plugins-cookies-2.1.0.tgz#3f5a44c4169d1d2954c749f1224bb3312c3b4749"
 
 aurelia-task-queue@^1.0.0, aurelia-task-queue@^1.1.0:
   version "1.2.0"
