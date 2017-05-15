@@ -1,6 +1,8 @@
 'use strict';
 
-exports.__esModule = true;
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.configure = configure;
 
 var _aureliaPluginsCookieConsentConfig = require('./aurelia-plugins-cookie-consent-config');
