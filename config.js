@@ -7,6 +7,7 @@ System.config({
   },
   map: {
     "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.3.1",
+    "aurelia-pal": "npm:aurelia-pal@1.3.0",
     "aurelia-plugins-cookies": "npm:aurelia-plugins-cookies@2.0.2",
     "aurelia-templating": "npm:aurelia-templating@1.4.2",
     "npm:aurelia-dependency-injection@1.3.1": {
