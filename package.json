@@ -11,7 +11,7 @@
   ],
   "homepage": "https://github.com/aurelia-plugins/aurelia-plugins-cookie-consent",
   "license": "MIT",
-  "author": "Bart Lenaerts <bart@codious.be> (http://codious.be/)",
+  "author": "Bart Lenaerts <bart@codious.io> (http://codious.io/)",
   "bugs": {
     "url": "https://github.com/aurelia-plugins/aurelia-plugins-cookie-consent/issues"
   },
