@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-wet-asphalt br-4 overflow-auto p-a-32 shadow-3 text-clouds text-xs-center" if.bind="show">
-    <p class="m-b-16" innerhtml.bind="message"></p>
-    <button class="btn-primary w-xs-100" click.delegate="dismiss()">${button}</button>
+  <div class="cookie-consent" if.bind="show">
+    <p innerhtml.bind="message"></p>
+    <button class="btn-primary" click.delegate="dismiss()">${button}</button>
   </div>
 </template>

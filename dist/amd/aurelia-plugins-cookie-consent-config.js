@@ -18,6 +18,10 @@ define(["exports"], function (exports) {
       this._config = { cookie: {} };
     }
 
+    Config.prototype.all = function all() {
+      return this._config;
+    };
+
     Config.prototype.get = function get(key) {
       return this._config[key];
     };

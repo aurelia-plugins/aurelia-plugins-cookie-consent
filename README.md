@@ -10,6 +10,18 @@ A Cookie Consent plugin for Aurelia.
 npm install aurelia-plugins-cookie-consent --save
 ```
 
+When using Aurelia CLI add the following dependency to `aurelia.json`:
+
+```json
+{
+  "name": "aurelia-plugins-cookie-consent",
+  "path": "../node_modules/aurelia-plugins-cookie-consent/dist/amd",
+  "main": "aurelia-plugins-cookie-consent"
+}
+```
+
+Add `node_modules/babel-polyfill/dist/polyfill.min.js` to the prepend list in `aurelia.json`. Do not forgot to add `babel-polyfill` to the dependencies in `package.json`.
+
 **JSPM**
 
 ```shell
@@ -35,12 +47,12 @@ export async function configure(aurelia) {
   aurelia.use
     .plugin('aurelia-plugins-cookie-consent', config => {
       config.options({
-        cookie: { domain: 'mydomain', path: '/' }, // your typical cookie settings like domain, expires, path and secure
+        cookie: { domain: '.site.com', path: '/' }, // your typical cookie settings like domain, expires, path and secure
       });
     });
 
-    await aurelia.start();
-    aurelia.setRoot('app');
+  await aurelia.start();
+  aurelia.setRoot('app');
 }
 ```
 
@@ -60,4 +72,24 @@ If you're using `aurelia-i18n`, you can use the tValueConverter to translate the
 
 ```html
 <aup-cookie-consent button="${ 'button-text' & t }" message="${ 'message-text' & t }"></aup-cookie-consent>
+```
+
+## Styling
+
+The notifier doesn't come with styling. If you use the CSS Framework [`Faceman`](<http://faceman.io>), styling is provided automatically. Otherwise copy and paste the below styling to your SCSS stylesheet. Use the variables to change the look-and-feel.
+
+```scss
+$cookie-consent-background: #34495e !default;
+$cookie-consent-border-radius: 4px !default;
+$cookie-consent-color: #ffffff !default;
+$cookie-consent-padding: 32px !default;
+$cookie-consent-shadow: 0 8px 17px 0 rgba(0,0,0,.2), 0 6px 20px 0 rgba(0,0,0,.19) !default;
+$cookie-consent-text-align: center !default;
+
+.cookie-consent {
+  background: $cookie-consent-background; border-radius: $cookie-consent-border-radius; color: $cookie-consent-color;
+  overflow: auto; padding: $cookie-consent-padding; box-shadow: $cookie-consent-shadow; text-align: $cookie-consent-text-align;
+}
+.cookie-consent button { width: 100%; }
+.cookie-consent p { margin-bottom: 16px; }
 ```

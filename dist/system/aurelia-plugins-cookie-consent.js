@@ -7,7 +7,7 @@ System.register(['aurelia-pal', './aurelia-plugins-cookie-consent-config'], func
   function configure(aurelia, configCallback) {
     var instance = aurelia.container.get(Config);
     if (configCallback !== undefined && typeof configCallback === 'function') configCallback(instance);
-    aurelia.globalResources(PLATFORM.moduleName('./aurelia-plugins-cookie-consent-element'));
+    aurelia.globalResources([PLATFORM.moduleName('./aurelia-plugins-cookie-consent-element')]);
   }
 
   _export('configure', configure);
